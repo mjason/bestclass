@@ -11,4 +11,20 @@
  *= require_self
  *= require_tree .
  */
+@import "bootswatch/cerulean/variables";
+@import "bootstrap";
+body { padding-top: 51px; }
+@import "bootstrap-responsive";
+@import "bootswatch/cerulean/bootswatch";
 
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

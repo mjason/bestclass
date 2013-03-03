@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class User
   include Mongoid::Document
   # Include default devise modules. Others available are:
@@ -9,6 +11,12 @@ class User
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
+
+  # user info
+  field :name
+  field :student_id
+
+  mount_uploader :avatar, AvatarUploader
   
   ## Recoverable
   field :reset_password_token,   :type => String

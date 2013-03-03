@@ -1,3 +1,4 @@
+# coding: utf-8
 source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.12'
@@ -16,7 +17,7 @@ end
 gem 'jquery-rails'
 
 # client mvc
-gem 'batman-rails'
+gem 'ng-angularjs-rails'
 
 # To use Jbuilder templates for JSON
 gem 'jbuilder'
@@ -24,9 +25,16 @@ gem 'jbuilder'
 # 存储
 gem "mongoid", "~> 3.0.0"
 
+# image uploader
+gem "carrierwave"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
 # user
 gem "devise"
 gem "cancan"
+
+# controller 抽象
+gem 'decent_exposure'
 
 group :test, :development do
   gem "rspec-rails"
