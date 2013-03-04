@@ -1,0 +1,1 @@
+json.(handout, :id, :title, :accessory)
