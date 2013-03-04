@@ -1,0 +1,33 @@
+.courses-teacher {
+  -moz-box-orient : horizontal;
+  -webkit-box-orient : horizontal;
+  box-orient : horizontal;
+
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+
+  .courses-teacher-image {
+    -moz-box-flex : 1;
+    -webkit-box-flex : 1;
+    box-flex : 1;
+    max-width: 100px;
+  }
+
+  .courses-teacher-info {
+    -moz-box-flex : 2;
+    -webkit-box-flex : 2;
+    box-flex : 2;
+    padding-left: 10px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+
+}
+.courses-index {
+  a {
+    margin-left: 10px;
+  }
+}

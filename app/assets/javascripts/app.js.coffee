@@ -1,6 +1,8 @@
 #= require_self
 #= require services
 #= require_tree ./controllers
+#= require ui
+
 bestclass = angular.module("bestclass", ['ngResource']).config(($routeProvider) ->
 #  $httpProvider.defaults.headers.post["X-CSRF-Token"] = window.csrf_token
   $routeProvider.when("/",
