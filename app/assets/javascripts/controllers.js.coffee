@@ -1,7 +1,7 @@
-angular.module("bestclass").controller "main_controller", ($scope) ->
+bestclass.controller "main_controller", ($scope) ->
   $scope.awesomeThings = []
 
-angular.module("bestclass").controller "courses_controller", ($scope, Courses, Handouts, Works) ->
+bestclass.controller "courses_controller", ($scope, Courses, Handouts, Works) ->
   $scope.courses = Courses.query()
 
   $scope.show = (id) ->

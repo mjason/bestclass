@@ -1,4 +1,3 @@
-bestclass = angular.module("bestclass")
 bestclass.factory "Courses", ($resource) ->
   $resource "/courses/:courses_id"
 
