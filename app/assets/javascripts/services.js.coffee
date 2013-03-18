@@ -6,3 +6,6 @@ bestclass.factory "Handouts", ($resource) ->
 
 bestclass.factory "Works", ($resource) ->
   $resource "/courses/:courses_id/works/:work_id"
+
+bestclass.factory "Task", ($resource) ->
+  $resource "/courses/:courses_id/works/:work_id/tasks/:task_id"

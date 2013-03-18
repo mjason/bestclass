@@ -72,6 +72,7 @@
                                     <thead>
                                     <tr>
                                         <th>作业</th>
+                                        <th>分数</th>
                                         <th>操作</th>
                                     </tr>
                                     </thead>
@@ -81,12 +82,14 @@
                                             {{ work.title }}
                                         </td>
                                         <td>
+                                            0
+                                        </td>
+                                        <td>
                                             <a href="{{ work.accessory.accessory.url }}"
                                                download="{{ work.title }}" class="btn btn-primary btn-small">
                                                 下载作业
-                                               </a>
-                                            <a class="btn btn-success btn-small">查看分数</a>
-                                            <a class="btn btn-danger btn-small" data-toggle="modal" href="#work-up" open-dialog>
+                                            </a>
+                                            <a class="btn btn-danger btn-small" ng-click="new_task(work.id, work.title)">
                                                 提交作业
                                             </a>
                                         </td>

@@ -5,7 +5,9 @@ Bestclass::Application.routes.draw do
   resource :users
   resources :courses do
     resources :handouts
-    resources :works
+    resources :works do
+      resources :task
+    end
   end
 
   root to: "users#show"
