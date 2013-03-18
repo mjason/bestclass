@@ -17,7 +17,7 @@ end
 gem 'jquery-rails'
 
 # client mvc
-gem 'ng-angularjs-rails'
+gem 'ng-angularjs-rails', git: "git://github.com/mjason/ng-angularjs-rails.git"
 
 # To use Jbuilder templates for JSON
 gem 'jbuilder'

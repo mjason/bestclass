@@ -3,7 +3,7 @@
 #= require controllers
 #= require ui
 
-window.bestclass = angular.module("bestclass", ['ngResource']).config(($routeProvider) ->
+window.bestclass = angular.module("bestclass", ['ngUpload', 'ngResource']).config(($routeProvider) ->
   $routeProvider.when("/",
     templateUrl: 'assets/views/main.html',
     controller: 'main_controller'

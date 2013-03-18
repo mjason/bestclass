@@ -3,18 +3,24 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">提交作业--{{ title }}</h3>
   </div>
+  
   <div class="modal-body">
-    <input type="file" ng-model="file" class="hide" id="task-file" />
-    <div class="input-append ie_hide">
-      <input id="pretty-input" class="input-large" type="text" onclick="$('input[id=task-file]').click();">
-      <a class="btn" onclick="$('input[id=task-file]').click();">Browse</a>
+    <form action="{{ url }}" method="post" enctype="multipart/form-data" target="submitframe">
+      <div style="margin:0;padding:0;display:inline">
+        <input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="{{ token }}" /></div>
+      <input type="file" name="file" class="hide" id="task-file" />
+      <div class="input-append ie_hide">
+        <input id="pretty-input" class="input-large" type="text" onclick="$('input[id=task-file]').click();">
+        <a class="btn" onclick="$('input[id=task-file]').click();">Browse</a>
+      </div>
     </div>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
-  </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <input type="submit" class="btn btn-primary" value="提交作业"/>
+    </form>
+  </div>  
 </div>
+<iframe name="submitframe" style="display: none" id="iframe"></iframe>
 <script type="text/javascript">
 $('input[id=task-file]').change(function() {
   $('#pretty-input').val($(this).val().replace("C:\\fakepath\\", ""));

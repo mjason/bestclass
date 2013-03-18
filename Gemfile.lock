@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/mjason/ng-angularjs-rails.git
+  revision: dc228f57d1e05c96eadbf8bd3a04626b732a5dcb
+  specs:
+    ng-angularjs-rails (0.0.4)
+
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -114,7 +120,6 @@ GEM
       mongoid (~> 3.0)
     moped (1.4.3)
     multi_json (1.6.1)
-    ng-angularjs-rails (0.0.3)
     nokogiri (1.5.6)
     origin (1.0.11)
     orm_adapter (0.4.0)
@@ -222,7 +227,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mongoid (~> 3.0.0)
-  ng-angularjs-rails
+  ng-angularjs-rails!
   rails (= 3.2.12)
   rb-fsevent
   rb-inotify

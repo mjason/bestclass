@@ -6,7 +6,7 @@ Bestclass::Application.routes.draw do
   resources :courses do
     resources :handouts
     resources :works do
-      resources :task
+      resources :tasks
     end
   end
 

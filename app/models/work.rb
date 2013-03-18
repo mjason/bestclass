@@ -8,4 +8,5 @@ class Work
 
   belongs_to :course
   has_many :tasks
+
 end
