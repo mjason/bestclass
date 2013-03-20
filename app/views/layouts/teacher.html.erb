@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>教师中心</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">教师中心</a>
+        <div class="nav-collapse" id="main-menu">
+          <ul class="nav" id="main-menu-left">
+            <li>
+              <a href="#/courses">课程</a>
+            </li>
+            <li>
+              <a href="#/messages">消息</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= yield %>
+</body>
+</html>

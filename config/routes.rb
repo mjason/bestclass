@@ -10,6 +10,10 @@ Bestclass::Application.routes.draw do
     end
   end
 
+  namespace :teacher do
+    resources :courses
+  end
+
   root to: "users#show"
 
 end
