@@ -48,3 +48,5 @@ group :test, :development do
 
   gem "thin"
 end
+
+gem 'simplecov', :group => :false
