@@ -1,1 +1,30 @@
-nihaoma?
+
+<div class="row-fluid">
+  <div class="span6">
+    <h3>目前我教导的课程</h3>
+    <hr> 
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>课程名称</th>
+          <th>操作</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <% @courses.each do |course| %>
+          <td><%= course.name %></td>
+          <td><%= link_to "进入课程", teacher_course_path(course) %></td>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="span6 well courses-setting">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="nav-btn">
+        <a href="">添加课程</a>
+      </li>
+    </ul>
+    <hr>
+  </div>
+</div>

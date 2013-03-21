@@ -49,5 +49,6 @@ class User
   # field :authentication_token, :type => String
 
   has_many :teach_courses, class_name: "Course", inverse_of: :teacher
+  has_and_belongs_to_many :studies, class_name: "Course", inverse_of: :students
   has_many :tasks
 end

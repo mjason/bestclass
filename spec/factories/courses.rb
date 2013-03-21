@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :course do
-    name "MyString"
+    name "ruby development"
   end
 end

@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :work do
-    title "MyString"
+    title "firt work"
+    association :course
   end
 end
