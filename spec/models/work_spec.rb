@@ -45,6 +45,16 @@ describe Work do
     task1.work = @work
     task1.save
     @work.submit_percentage.should == 50
+  end
+
+  it "测试为提交作业人名单" do
+    @course.students << @user1
+    @course.students << @user2
+    @course.save
+    task1 = @user1.tasks.new
+    task1.work = @work
+    task1.save
+    @work.un_tasks.first.should == @user2
   end  
   
 end

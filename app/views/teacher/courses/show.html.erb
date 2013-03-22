@@ -28,5 +28,12 @@
     <div class="span6">
       <h3>作业详情</h3>
       <hr>
+      <div ng-controller="teacherCtrl">
+        <h4>{{ courseName }}</h4>
+        <hr>
+        <div>
+          <%= render "works" %>
+        </div>  
     </div>
   </div>
+</div>

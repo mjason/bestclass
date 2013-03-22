@@ -26,3 +26,6 @@ bestclass.controller "taskCtrl", ($scope, Task) ->
     $scope.title = window.this_work.title
     $scope.url = "/courses/" + window.courses_id + "/works/" + window.this_work.id + "/tasks"
     $scope.token = window.csrf_token
+
+bestclass.controller "teacherCtrl", ($scope, $http) ->
+  $scope.courseName = "manjia"

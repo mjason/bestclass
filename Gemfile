@@ -49,4 +49,5 @@ group :test, :development do
   gem "thin"
 end
 
+# 测试覆盖率
 gem 'simplecov', :group => :false

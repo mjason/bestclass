@@ -14,4 +14,10 @@ class Work
     (percentage * 100).to_i
   end
 
+  def un_tasks
+    tasks = []
+    self.tasks.each { |task| tasks << task.user }
+    self.course.students.to_a - tasks
+  end
+
 end

@@ -11,7 +11,9 @@ Bestclass::Application.routes.draw do
   end
 
   namespace :teacher do
-    resources :courses
+    resources :courses do
+      resources :works
+    end
   end
 
   root to: "users#show"
