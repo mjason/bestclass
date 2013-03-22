@@ -28,4 +28,14 @@ bestclass.controller "taskCtrl", ($scope, Task) ->
     $scope.token = window.csrf_token
 
 bestclass.controller "teacherCtrl", ($scope, $http) ->
-  $scope.courseName = "manjia"
+  # $scope.courseName = "manjia"
+  $scope.show = (id, name, courses_id) ->
+    console.log courses_id
+    $scope.courseName = name
+    url = "/teacher/courses/" + courses_id + "/works/" + id + ".json?tasks=true"
+    url1 = "/teacher/courses/" + courses_id + "/works/" + id + ".json?tasks=false"
+    $http.get(url).success (data, status) ->
+      $scope.ok_tasks = data
+      console.log data
+    $http.get(url1).success (data, status) ->
+      $scope.no_tasks = data

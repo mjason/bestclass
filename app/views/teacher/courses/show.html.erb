@@ -1,6 +1,17 @@
 
-<div class="row-fluid">
+<div class="row-fluid"  ng-controller="teacherCtrl">
   <div class="span6">
+    <div style="margin: 10px">
+      <ul class="nav nav-pills">
+        <li>
+          <a href="#">课件管理</a>
+        </li>
+        <li><a href="#">作业管理</a></li>
+        <li><a href="#">课件添加</a></li>
+        <li><a href="#">添加作业</a></li>
+      </ul>
+    </div>
+    <hr> 
     <h3>作业仪表</h3>
     <hr>
     <table class="table table-hover">
@@ -20,7 +31,9 @@
               <div class="bar" style="width: <%= work.submit_percentage.to_s %>%;"></div>
             </div>
           </td>
-          <td>link</td>
+          <td>
+            <a href="#" ng-click="show('<%= work.id %>', '<%= work.title %>', '<%= work.course.id %>')">进入</a>
+          </td>
           <% end %>
         </tbody>
       </table>
@@ -28,12 +41,12 @@
     <div class="span6">
       <h3>作业详情</h3>
       <hr>
-      <div ng-controller="teacherCtrl">
+      <div>
         <h4>{{ courseName }}</h4>
         <hr>
         <div>
           <%= render "works" %>
         </div>  
+      </div>
     </div>
   </div>
-</div>

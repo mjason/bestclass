@@ -14,11 +14,20 @@
         <tr>
           <th>姓名</th>
           <th>提交时间</th>
+          <th>分数</th>
           <th>操作</th> 
         </tr>
       </thead>
       <tbody>
-
+        <tr ng-repeat="task in ok_tasks">
+          <td>{{ task.name }}</td>
+          <td>{{ task.created_at }}</td>
+          <td>90</td>
+          <td>
+            <a href="{{ task.url }}">下载</a>
+            <a href="#">打分</a>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -30,7 +39,9 @@
         </tr>
       </thead>
       <tbody>
-
+        <tr ng-repeat="task in no_tasks">
+          <td>{{ task.name }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
