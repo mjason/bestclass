@@ -12,7 +12,6 @@ class Handout
   field :accessory_pdf, type: String
   field :accessory_swf, type: String
 
-  
 
   def pdf
     accessory_pdf

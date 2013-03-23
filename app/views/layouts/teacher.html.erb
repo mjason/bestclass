@@ -4,6 +4,9 @@
   <title>教师中心</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script>
+    window.csrf_token = "<%= form_authenticity_token %>";
+  </script>
 </head>
 <body ng-app="bestclass">
   <div class="navbar navbar-fixed-top">

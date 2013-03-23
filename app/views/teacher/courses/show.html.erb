@@ -3,12 +3,8 @@
   <div class="span6">
     <div style="margin: 10px">
       <ul class="nav nav-pills">
-        <li>
-          <a href="#">课件管理</a>
-        </li>
-        <li><a href="#">作业管理</a></li>
         <li><a href="#">课件添加</a></li>
-        <li><a href="#">添加作业</a></li>
+        <li><a href="#myModal" data-toggle="modal">添加作业</a></li>
       </ul>
     </div>
     <hr> 
@@ -36,8 +32,8 @@
           </td>
           <% end %>
         </tbody>
-      </table>
-    </div>
+    </table>
+  </div>
     <div class="span6">
       <h3>作业详情</h3>
       <hr>
@@ -48,5 +44,7 @@
           <%= render "works" %>
         </div>  
       </div>
-    </div>
   </div>
+</div>
+
+<%= render "madal" %>

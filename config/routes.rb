@@ -12,7 +12,10 @@ Bestclass::Application.routes.draw do
 
   namespace :teacher do
     resources :courses do
-      resources :works
+      resources :handouts, only: ["create"]
+      resources :works do 
+        resources :tasks, only: ["update"]
+      end
     end
   end
 

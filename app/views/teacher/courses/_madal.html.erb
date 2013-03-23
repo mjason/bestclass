@@ -1,0 +1,22 @@
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">上传作业</h3>
+  </div>
+  
+  <div class="modal-body">
+    <%= form_for [:teacher, @course ,@new_work], html: {class: "form"} do |f| -%>
+    <fieldset>
+      <div class="controls">
+        <%= f.text_field :title, placeholder: "作业名称" %>
+      </div>
+      <div class="controls">
+        <%= f.file_field :accessory %>
+      </div>
+      <div class="controls">
+        <%= f.submit "Submit", class: "btn"%>
+      </div>
+    </fieldset>
+    <% end -%>
+  </div>
+</div>

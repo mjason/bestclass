@@ -1,6 +1,6 @@
 if params[:tasks] == "true"
   json.array! @work.tasks do |task|
-    json.(task, :id, :created_at)
+    json.(task, :id, :created_at, :grade)
     json.url task.task.url
     json.name task.user.name
     json.email task.user.email

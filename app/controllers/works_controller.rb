@@ -29,7 +29,6 @@ class WorksController < ApplicationController
     else
       @works = works
     end
-
   end
 
 end

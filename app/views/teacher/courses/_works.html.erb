@@ -22,10 +22,10 @@
         <tr ng-repeat="task in ok_tasks">
           <td>{{ task.name }}</td>
           <td>{{ task.created_at }}</td>
-          <td>90</td>
+          <td>{{ task.grade }}</td>
           <td>
             <a href="{{ task.url }}">下载</a>
-            <a href="#">打分</a>
+            <a href="#" ng-click="grade_click(task.id)">打分</a>
           </td>
         </tr>
       </tbody>
@@ -44,5 +44,21 @@
         </tr>
       </tbody>
     </table>
+  </div>
+</div>
+
+<div id="grade" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">打分</h3>
+  </div>
+  <div class="modal-body">
+    <p>
+      <input type="text" ng-model="grade_model" />
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary" ng-click="grade_sub()">提交</button>
   </div>
 </div>

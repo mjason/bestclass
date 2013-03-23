@@ -9,3 +9,6 @@ bestclass.factory "Works", ($resource) ->
 
 bestclass.factory "Task", ($resource) ->
   $resource "/courses/:courses_id/works/:work_id/tasks/:task_id"
+
+bestclass.factory "TeacherTask", ($resource) ->
+  $resource "/teacher/courses/:courses_id/works/:work_id/tasks/:id"

@@ -4,6 +4,7 @@ class Teacher::CoursesController < TeacherController
   end
 
   def show
+    @new_work = current_user.teach_courses.find(params[:id]).works.new
     @course = current_user.teach_courses.find(params[:id])
   end
 end
