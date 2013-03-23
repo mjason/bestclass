@@ -20,6 +20,12 @@ bestclass.controller "courses_controller", ($scope, Courses, Handouts, Works) ->
     window.this_work = {"id": id, "title": title}
     $("#work-up").modal("show")
 
+  $scope.preview = (swf) ->
+    window.handout_swf = swf
+    $("#handout").modal("show")
+    flexpaper(swf)
+
+
 bestclass.controller "taskCtrl", ($scope, Task) ->
   $("#work-up").on "show", ->
     console.log "show"

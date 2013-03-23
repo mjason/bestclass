@@ -62,9 +62,9 @@
                                            {{ handout.title }}
                                         </td>
                                         <td>
-                                            <a class="btn btn-success btn-small">预览</a>
+                                            <a class="btn btn-success btn-small" ng-click="preview(handout.swf)">预览</a>
                                             <a class="btn btn-danger btn-small" download="{{ handout.title }}"
-                                               href="{{ handout.accessory.accessory.url }}">下载</a>
+                                               href="{{ handout.download }}">下载</a>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -122,8 +122,40 @@
     </div>
 </div>
 
-
 <script>
     ui.set_course_show_with();
+    var startDocument = "Paper";
+    function flexpaper(swf) {
+        $('#documentViewer').FlexPaperViewer(
+            { config : {
+
+                  SWFFile : swf,
+                  
+                  Scale : 0,
+                  ZoomTransition : 'easeOut',
+                  ZoomTime : 0.5,
+                  ZoomInterval : 0.2,
+                  FitPageOnLoad : true,
+                  FitWidthOnLoad : false,
+                  FullScreenAsMaxWindow : false,
+                  ProgressiveLoading : false,
+                  MinZoomSize : 0.2,
+                  MaxZoomSize : 5,
+                  SearchMatchAll : false,
+                  InitViewMode : 'Portrait',
+                  RenderingOrder : 'flash,html',
+                  StartAtPage : '',
+                  
+                  ViewModeToolsVisible : true,
+                  ZoomToolsVisible : true,
+                  NavToolsVisible : true,
+                  CursorToolsVisible : true,
+                  SearchToolsVisible : true,
+                  WMode : 'window',
+                  localeChain: 'en_US'
+                  }}
+            );
+    }
+    
 </script>
 

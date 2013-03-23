@@ -17,3 +17,5 @@
 //= require angular
 //= require angular-resource
 //= require ng-upload
+//= require flexpaper
+//= require flexpaper_handlers

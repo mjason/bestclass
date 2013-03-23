@@ -4,7 +4,10 @@ Bestclass::Application.routes.draw do
 
   resource :users
   resources :courses do
-    resources :handouts
+    resources :handouts do
+      get 'download'
+      get 'swf'
+    end
     resources :works do
       resources :tasks
     end
