@@ -21,8 +21,7 @@ bestclass.controller "courses_controller", ($scope, Courses, Handouts, Works) ->
     $("#work-up").modal("show")
 
   $scope.preview = (swf) ->
-    window.handout_swf = swf
-    $("#handout").modal("show")
+    $("#handout_p").modal("show")
     flexpaper(swf)
 
 
@@ -36,6 +35,7 @@ bestclass.controller "taskCtrl", ($scope, Task) ->
 bestclass.controller "teacherCtrl", ($scope, $http, TeacherTask) ->
   # $scope.courseName = "manjia"
   $scope.show = (id, name, courses_id) ->
+    $scope.work_task_url = "/teacher/courses/" + courses_id + "/works/" + id + "/down_tasks.csv"
     $scope.courses_id = courses_id
     $scope.work_id = id
     $scope.courseName = name

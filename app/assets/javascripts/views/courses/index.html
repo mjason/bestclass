@@ -26,12 +26,11 @@
                     <hr>
                     <div class="well courses-teacher">
                         <div class="courses-teacher-image">
-                            <img src="/assets/my_photo.jpg" alt="" width="100px" height="100px">
+                            <img src="/assets/my_photo.png" alt="" width="100px" height="100px">
                         </div>
                         <div class="courses-teacher-info">
                             <h3>@{{ course.teacher.name }}</h3>
                             <hr>
-                            <a class="btn btn-warning btn-small">发消息</a>
                         </div>
                     </div>
 
@@ -108,7 +107,7 @@
                                     <tbody>
                                         <tr ng-repeat="work in old_works">
                                             <td>{{ work.title }}</td>
-                                            <td>0</td>
+                                            <td>{{ work.grade }}</td>
                                         </tr>                                        
                                     </tbody>
                                 </table>

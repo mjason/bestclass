@@ -17,6 +17,7 @@ Bestclass::Application.routes.draw do
     resources :courses do
       resources :handouts, only: ["create"]
       resources :works do 
+        get "down_tasks"
         resources :tasks, only: ["update"]
       end
     end
